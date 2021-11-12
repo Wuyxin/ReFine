@@ -1,4 +1,4 @@
-# ReFine (Multi-Grained Explainability for Graph Neural Networks)
+# ReFine: Multi-Grained Explainability for GNNs
 We are trying hard to update the code, but it may take a while to complete due to our tight schedule recently. Thank you for your waiting!
 
 ## Installation

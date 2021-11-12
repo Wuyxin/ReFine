@@ -25,14 +25,15 @@ pip install torch-geometric
 
 1. The processed raw data for `BA-3motif` is available in the` data/` folder.
 2. Datasets `MNIST`, `Mutagenicity` will be automatically downloaded when training models.
-3. Download the VG-5 dataset from [Google Drive](https://drive.google.com/file/d/1ONg9hFCynE3KynxakgFhqZxg0fWRXgv6/view?usp=shari). Arrange the dir as 
+3. We select and label 4444 graphs from https://visualgenome.org/ to construct the **VG-5** dataset. The graphs are labeled with five classes: stadium, street, farm, surfing, forest. Each graph contains regions of the objects as the nodes, while edges indicate the relationships between object nodes. 
+
+Download the dataset from [Google Drive](https://drive.google.com/file/d/1ONg9hFCynE3KynxakgFhqZxg0fWRXgv6/view?usp=shari). Arrange the dir as 
 ```
 data ---BA3
  |------VG
         |---raw
 ``` 
-We select and label 4444 graphs from https://visualgenome.org/. The graphs are labeled with five classes: stadium, street, farm, surfing, forest. Each graph contains regions of the objects as the nodes, while edges indicate the relationships between object nodes. Please remember to cite Visual Genome ([bibtex](https://dblp.uni-trier.de/rec/journals/ijcv/KrishnaZGJHKCKL17.html?view=bibtex)) if you use our VG-5.
-
+Please remember to cite Visual Genome ([bibtex](https://dblp.uni-trier.de/rec/journals/ijcv/KrishnaZGJHKCKL17.html?view=bibtex)) if you use our VG-5 dataset.
 ## Training GNNs
 ```
 cd gnns/

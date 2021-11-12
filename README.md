@@ -31,7 +31,7 @@ data ---BA3
  |------VG
         |---raw
 ``` 
-We select and label 4444 graphs from https://visualgenome.org/. The graphs are labeled with five classes: stadium, street, farm, surfing, forest. Each graph contains regions of the objects as the nodes, while edges indicate the relationships between object nodes. (Automatically download will be available soon)
+We select and label 4444 graphs from https://visualgenome.org/. The graphs are labeled with five classes: stadium, street, farm, surfing, forest. Each graph contains regions of the objects as the nodes, while edges indicate the relationships between object nodes. Please remember to cite Visual Genome ([bibtex](https://dblp.uni-trier.de/rec/journals/ijcv/KrishnaZGJHKCKL17.html?view=bibtex)) if you use our VG-5.
 
 ## Training GNNs
 ```

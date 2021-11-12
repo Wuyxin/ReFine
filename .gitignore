@@ -1,0 +1,9 @@
+data/MNIST
+data/MUTAG
+data/VG
+data/BA3/processed
+param/
+
+utils/__pycache__/
+gnns/__pycache__/
+datasets/__pycache__/

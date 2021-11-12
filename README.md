@@ -42,9 +42,9 @@ python ba3motif_gnn.py --epoch 100 --num_unit 2 --batch_size 128
 The trained GNNs will be saved in `param/gnns`.
 
 ## Explaining the Predictions
-code coming soon
+code is coming soon
 ## Evaluation \& Visualization
-code coming soon
+code is coming soon
 
 ## Citation
 Please cite our paper if you find the repository useful.

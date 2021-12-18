@@ -2,8 +2,15 @@ data/MNIST
 data/MUTAG
 data/VG
 data/BA3/processed
-param/
+
+param/filtered
+param/pg
+param/refine
 
 utils/__pycache__/
 gnns/__pycache__/
 datasets/__pycache__/
+visual_genome/
+
+nohup.out
+train/nohup.out

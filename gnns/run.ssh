@@ -1,0 +1,4 @@
+nohup python ba3motif_gnn.py &
+nohup python mutag_gnn.py &
+nohup python mnist_gnn.py &
+nohup vg_gnn.py &

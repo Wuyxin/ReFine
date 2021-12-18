@@ -8,7 +8,6 @@ import networkx as nx
 from torch import nn
 import matplotlib.pyplot as plt
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def set_seed(seed):
     random.seed(seed)
@@ -21,7 +20,7 @@ def set_seed(seed):
 
 # general function to train Node classification tasks
 # under single graph.
-def Ntrain(args, graph, model):
+def Ntrain(args, graph, model, device):
     model.train()
     idx = [i for i in range(graph.num_nodes)]
     criterion = nn.CrossEntropyLoss()
@@ -62,7 +61,7 @@ def Ntrain(args, graph, model):
             last_test_acc = test_acc
 
 
-def Ntest(node_idx, graph, model):
+def Ntest(node_idx, graph, model, device):
     model.eval()
     criterion = nn.CrossEntropyLoss()
     output = model(graph.x, graph.edge_index, graph.edge_attr)
@@ -76,6 +75,7 @@ def Ntest(node_idx, graph, model):
 def Gtrain(train_loader,
            model,
            optimizer,
+           device,
            criterion=nn.MSELoss()
            ):
     model.train()
@@ -99,6 +99,7 @@ def Gtrain(train_loader,
 
 def Gtest(test_loader,
           model,
+          device,
           criterion=nn.L1Loss(reduction='mean'),
           ):
 

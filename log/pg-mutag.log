@@ -1,0 +1,203 @@
+2021-12-18 22:20:09,013 - pg_train.py[line:89] - INFO: number of graphs(train): 2962
+2021-12-18 22:20:09,014 - pg_train.py[line:89] - INFO: number of graphs(val):  401
+2021-12-18 22:20:09,016 - pg_train.py[line:89] - INFO: number of graphs(test):  401
+2021-12-18 22:21:20,118 - pg_train.py[line:147] - INFO: Epoch: 1, LR: 0.00100, Ratio: 0.40, Train Loss: -0.629, Val Loss: -0.660
+2021-12-18 22:21:20,121 - pg_train.py[line:148] - INFO: ACC:[[0.54 0.57 0.58 0.61 0.61 0.63 0.65 0.68 0.8  1.  ]] ACC-AUC: 0.667
+2021-12-18 22:22:21,984 - pg_train.py[line:147] - INFO: Epoch: 2, LR: 0.00100, Ratio: 0.40, Train Loss: -1.298, Val Loss: -0.666
+2021-12-18 22:22:21,988 - pg_train.py[line:148] - INFO: ACC:[[0.54 0.56 0.58 0.6  0.63 0.6  0.64 0.72 0.81 1.  ]] ACC-AUC: 0.668
+2021-12-18 22:23:17,425 - pg_train.py[line:147] - INFO: Epoch: 3, LR: 0.00100, Ratio: 0.40, Train Loss: -1.971, Val Loss: -0.667
+2021-12-18 22:23:17,429 - pg_train.py[line:148] - INFO: ACC:[[0.54 0.53 0.6  0.63 0.64 0.62 0.64 0.74 0.84 1.  ]] ACC-AUC: 0.679
+2021-12-18 22:24:15,767 - pg_train.py[line:147] - INFO: Epoch: 4, LR: 0.00100, Ratio: 0.40, Train Loss: -2.644, Val Loss: -0.668
+2021-12-18 22:24:15,769 - pg_train.py[line:148] - INFO: ACC:[[0.53 0.53 0.58 0.62 0.64 0.6  0.64 0.78 0.85 1.  ]] ACC-AUC: 0.675
+2021-12-18 22:25:14,516 - pg_train.py[line:147] - INFO: Epoch: 5, LR: 0.00100, Ratio: 0.40, Train Loss: -3.318, Val Loss: -0.670
+2021-12-18 22:25:14,518 - pg_train.py[line:148] - INFO: ACC:[[0.54 0.54 0.59 0.61 0.64 0.63 0.67 0.75 0.84 1.  ]] ACC-AUC: 0.681
+2021-12-18 22:26:15,358 - pg_train.py[line:147] - INFO: Epoch: 6, LR: 0.00100, Ratio: 0.40, Train Loss: -3.994, Val Loss: -0.673
+2021-12-18 22:26:15,359 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.62 0.62 0.64 0.63 0.67 0.77 0.84 1.  ]] ACC-AUC: 0.693
+2021-12-18 22:27:15,706 - pg_train.py[line:147] - INFO: Epoch: 7, LR: 0.00100, Ratio: 0.40, Train Loss: -4.672, Val Loss: -0.673
+2021-12-18 22:27:15,709 - pg_train.py[line:148] - INFO: ACC:[[0.59 0.55 0.61 0.63 0.62 0.67 0.71 0.79 0.83 1.  ]] ACC-AUC: 0.701
+2021-12-18 22:28:14,995 - pg_train.py[line:147] - INFO: Epoch: 8, LR: 0.00100, Ratio: 0.40, Train Loss: -5.350, Val Loss: -0.674
+2021-12-18 22:28:14,997 - pg_train.py[line:148] - INFO: ACC:[[0.56 0.57 0.61 0.63 0.63 0.63 0.69 0.76 0.8  1.  ]] ACC-AUC: 0.687
+2021-12-18 22:29:12,206 - pg_train.py[line:147] - INFO: Epoch: 9, LR: 0.00100, Ratio: 0.40, Train Loss: -6.028, Val Loss: -0.675
+2021-12-18 22:29:12,209 - pg_train.py[line:148] - INFO: ACC:[[0.56 0.54 0.58 0.6  0.62 0.64 0.67 0.74 0.83 1.  ]] ACC-AUC: 0.677
+2021-12-18 22:30:06,798 - pg_train.py[line:147] - INFO: Epoch: 10, LR: 0.00100, Ratio: 0.40, Train Loss: -6.706, Val Loss: -0.674
+2021-12-18 22:30:06,800 - pg_train.py[line:148] - INFO: ACC:[[0.56 0.53 0.59 0.56 0.6  0.62 0.68 0.73 0.83 1.  ]] ACC-AUC: 0.669
+2021-12-18 22:31:07,740 - pg_train.py[line:147] - INFO: Epoch: 11, LR: 0.00100, Ratio: 0.40, Train Loss: -7.384, Val Loss: -0.673
+2021-12-18 22:31:07,742 - pg_train.py[line:148] - INFO: ACC:[[0.57 0.54 0.6  0.58 0.59 0.63 0.64 0.72 0.81 1.  ]] ACC-AUC: 0.668
+2021-12-18 22:32:08,582 - pg_train.py[line:147] - INFO: Epoch: 12, LR: 0.00100, Ratio: 0.40, Train Loss: -8.062, Val Loss: -0.675
+2021-12-18 22:32:08,584 - pg_train.py[line:148] - INFO: ACC:[[0.57 0.54 0.59 0.58 0.58 0.63 0.65 0.68 0.82 1.  ]] ACC-AUC: 0.663
+2021-12-18 22:33:10,003 - pg_train.py[line:147] - INFO: Epoch: 13, LR: 0.00100, Ratio: 0.40, Train Loss: -8.741, Val Loss: -0.676
+2021-12-18 22:33:10,005 - pg_train.py[line:148] - INFO: ACC:[[0.55 0.53 0.59 0.57 0.59 0.64 0.66 0.71 0.81 1.  ]] ACC-AUC: 0.667
+2021-12-18 22:34:13,518 - pg_train.py[line:147] - INFO: Epoch: 14, LR: 0.00100, Ratio: 0.40, Train Loss: -9.418, Val Loss: -0.668
+2021-12-18 22:34:13,521 - pg_train.py[line:148] - INFO: ACC:[[0.55 0.52 0.58 0.59 0.64 0.62 0.69 0.75 0.82 1.  ]] ACC-AUC: 0.676
+2021-12-18 22:35:12,340 - pg_train.py[line:147] - INFO: Epoch: 15, LR: 0.00100, Ratio: 0.40, Train Loss: -10.095, Val Loss: -0.672
+2021-12-18 22:35:12,344 - pg_train.py[line:148] - INFO: ACC:[[0.55 0.55 0.57 0.6  0.6  0.61 0.69 0.73 0.81 1.  ]] ACC-AUC: 0.671
+2021-12-18 22:36:09,703 - pg_train.py[line:147] - INFO: Epoch: 16, LR: 0.00100, Ratio: 0.40, Train Loss: -10.771, Val Loss: -0.676
+2021-12-18 22:36:09,705 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.56 0.58 0.6  0.64 0.66 0.7  0.76 0.82 1.  ]] ACC-AUC: 0.689
+2021-12-18 22:37:09,316 - pg_train.py[line:147] - INFO: Epoch: 17, LR: 0.00100, Ratio: 0.40, Train Loss: -11.449, Val Loss: -0.672
+2021-12-18 22:37:09,319 - pg_train.py[line:148] - INFO: ACC:[[0.59 0.57 0.6  0.62 0.63 0.67 0.72 0.77 0.83 1.  ]] ACC-AUC: 0.698
+2021-12-18 22:38:14,092 - pg_train.py[line:147] - INFO: Epoch: 18, LR: 0.00100, Ratio: 0.40, Train Loss: -12.127, Val Loss: -0.675
+2021-12-18 22:38:14,095 - pg_train.py[line:148] - INFO: ACC:[[0.59 0.56 0.6  0.61 0.63 0.69 0.72 0.77 0.82 1.  ]] ACC-AUC: 0.697
+2021-12-18 22:39:15,113 - pg_train.py[line:147] - INFO: Epoch: 19, LR: 0.00100, Ratio: 0.40, Train Loss: -12.804, Val Loss: -0.676
+2021-12-18 22:39:15,115 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.55 0.61 0.62 0.65 0.68 0.73 0.78 0.85 1.  ]] ACC-AUC: 0.704
+2021-12-18 22:40:16,608 - pg_train.py[line:147] - INFO: Epoch: 20, LR: 0.00100, Ratio: 0.40, Train Loss: -13.481, Val Loss: -0.673
+2021-12-18 22:40:16,610 - pg_train.py[line:148] - INFO: ACC:[[0.59 0.54 0.59 0.63 0.64 0.65 0.72 0.77 0.83 1.  ]] ACC-AUC: 0.695
+2021-12-18 22:41:18,942 - pg_train.py[line:147] - INFO: Epoch: 21, LR: 0.00100, Ratio: 0.40, Train Loss: -14.159, Val Loss: -0.674
+2021-12-18 22:41:18,944 - pg_train.py[line:148] - INFO: ACC:[[0.59 0.55 0.59 0.61 0.63 0.63 0.69 0.76 0.81 1.  ]] ACC-AUC: 0.685
+2021-12-18 22:42:18,681 - pg_train.py[line:147] - INFO: Epoch: 22, LR: 0.00100, Ratio: 0.40, Train Loss: -14.838, Val Loss: -0.673
+2021-12-18 22:42:18,685 - pg_train.py[line:148] - INFO: ACC:[[0.59 0.6  0.6  0.61 0.63 0.66 0.71 0.76 0.81 1.  ]] ACC-AUC: 0.697
+2021-12-18 22:43:16,616 - pg_train.py[line:147] - INFO: Epoch: 23, LR: 0.00020, Ratio: 0.40, Train Loss: -15.515, Val Loss: -0.673
+2021-12-18 22:43:16,620 - pg_train.py[line:148] - INFO: ACC:[[0.6  0.59 0.62 0.6  0.61 0.66 0.7  0.76 0.82 1.  ]] ACC-AUC: 0.696
+2021-12-18 22:44:16,587 - pg_train.py[line:147] - INFO: Epoch: 24, LR: 0.00020, Ratio: 0.40, Train Loss: -16.194, Val Loss: -0.675
+2021-12-18 22:44:16,590 - pg_train.py[line:148] - INFO: ACC:[[0.6  0.59 0.62 0.6  0.61 0.67 0.71 0.75 0.82 1.  ]] ACC-AUC: 0.696
+2021-12-18 22:45:16,302 - pg_train.py[line:147] - INFO: Epoch: 25, LR: 0.00020, Ratio: 0.40, Train Loss: -16.873, Val Loss: -0.674
+2021-12-18 22:45:16,307 - pg_train.py[line:148] - INFO: ACC:[[0.59 0.57 0.62 0.61 0.61 0.67 0.71 0.75 0.8  1.  ]] ACC-AUC: 0.692
+2021-12-18 22:46:17,871 - pg_train.py[line:147] - INFO: Epoch: 26, LR: 0.00020, Ratio: 0.40, Train Loss: -17.552, Val Loss: -0.675
+2021-12-18 22:46:17,874 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.62 0.61 0.61 0.66 0.7  0.75 0.81 1.  ]] ACC-AUC: 0.691
+2021-12-18 22:47:20,439 - pg_train.py[line:147] - INFO: Epoch: 27, LR: 0.00004, Ratio: 0.40, Train Loss: -18.232, Val Loss: -0.675
+2021-12-18 22:47:20,441 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.56 0.61 0.62 0.61 0.67 0.7  0.75 0.82 1.  ]] ACC-AUC: 0.691
+2021-12-18 22:48:26,186 - pg_train.py[line:147] - INFO: Epoch: 28, LR: 0.00004, Ratio: 0.40, Train Loss: -18.912, Val Loss: -0.675
+2021-12-18 22:48:26,189 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.56 0.61 0.62 0.61 0.67 0.69 0.75 0.82 1.  ]] ACC-AUC: 0.691
+2021-12-18 22:49:26,981 - pg_train.py[line:147] - INFO: Epoch: 29, LR: 0.00004, Ratio: 0.40, Train Loss: -19.591, Val Loss: -0.675
+2021-12-18 22:49:26,983 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.56 0.61 0.62 0.61 0.67 0.69 0.76 0.81 1.  ]] ACC-AUC: 0.692
+2021-12-18 22:50:26,814 - pg_train.py[line:147] - INFO: Epoch: 30, LR: 0.00004, Ratio: 0.40, Train Loss: -20.271, Val Loss: -0.675
+2021-12-18 22:50:26,816 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.62 0.62 0.61 0.67 0.7  0.75 0.82 1.  ]] ACC-AUC: 0.693
+2021-12-18 22:51:28,125 - pg_train.py[line:147] - INFO: Epoch: 31, LR: 0.00001, Ratio: 0.40, Train Loss: -20.951, Val Loss: -0.675
+2021-12-18 22:51:28,128 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.61 0.62 0.6  0.67 0.7  0.75 0.82 1.  ]] ACC-AUC: 0.693
+2021-12-18 22:52:26,208 - pg_train.py[line:147] - INFO: Epoch: 32, LR: 0.00001, Ratio: 0.40, Train Loss: -21.630, Val Loss: -0.675
+2021-12-18 22:52:26,210 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.56 0.61 0.62 0.61 0.67 0.7  0.75 0.82 1.  ]] ACC-AUC: 0.692
+2021-12-18 22:53:24,415 - pg_train.py[line:147] - INFO: Epoch: 33, LR: 0.00001, Ratio: 0.40, Train Loss: -22.310, Val Loss: -0.675
+2021-12-18 22:53:24,418 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.61 0.62 0.61 0.67 0.7  0.75 0.82 1.  ]] ACC-AUC: 0.692
+2021-12-18 22:54:28,632 - pg_train.py[line:147] - INFO: Epoch: 34, LR: 0.00001, Ratio: 0.40, Train Loss: -22.989, Val Loss: -0.676
+2021-12-18 22:54:28,635 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.61 0.62 0.6  0.67 0.7  0.75 0.81 1.  ]] ACC-AUC: 0.692
+2021-12-18 22:55:31,135 - pg_train.py[line:147] - INFO: Epoch: 35, LR: 0.00001, Ratio: 0.40, Train Loss: -23.668, Val Loss: -0.676
+2021-12-18 22:55:31,138 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.61 0.62 0.6  0.67 0.7  0.75 0.81 1.  ]] ACC-AUC: 0.691
+2021-12-18 22:56:31,695 - pg_train.py[line:147] - INFO: Epoch: 36, LR: 0.00001, Ratio: 0.40, Train Loss: -24.348, Val Loss: -0.674
+2021-12-18 22:56:31,697 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.61 0.62 0.61 0.67 0.7  0.75 0.81 1.  ]] ACC-AUC: 0.692
+2021-12-18 22:57:34,954 - pg_train.py[line:147] - INFO: Epoch: 37, LR: 0.00001, Ratio: 0.40, Train Loss: -25.028, Val Loss: -0.675
+2021-12-18 22:57:34,956 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.61 0.62 0.6  0.67 0.7  0.75 0.81 1.  ]] ACC-AUC: 0.691
+2021-12-18 22:58:31,811 - pg_train.py[line:147] - INFO: Epoch: 38, LR: 0.00001, Ratio: 0.40, Train Loss: -25.708, Val Loss: -0.675
+2021-12-18 22:58:31,813 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.61 0.62 0.6  0.67 0.7  0.75 0.81 1.  ]] ACC-AUC: 0.691
+2021-12-18 22:59:28,594 - pg_train.py[line:147] - INFO: Epoch: 39, LR: 0.00001, Ratio: 0.40, Train Loss: -26.388, Val Loss: -0.675
+2021-12-18 22:59:28,596 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.61 0.62 0.61 0.67 0.7  0.74 0.81 1.  ]] ACC-AUC: 0.691
+2021-12-18 23:00:29,351 - pg_train.py[line:147] - INFO: Epoch: 40, LR: 0.00001, Ratio: 0.40, Train Loss: -27.068, Val Loss: -0.675
+2021-12-18 23:00:29,355 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.61 0.62 0.6  0.67 0.69 0.74 0.81 1.  ]] ACC-AUC: 0.690
+2021-12-18 23:01:31,758 - pg_train.py[line:147] - INFO: Epoch: 41, LR: 0.00001, Ratio: 0.40, Train Loss: -27.748, Val Loss: -0.675
+2021-12-18 23:01:31,762 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.61 0.62 0.61 0.67 0.7  0.75 0.81 1.  ]] ACC-AUC: 0.692
+2021-12-18 23:02:33,410 - pg_train.py[line:147] - INFO: Epoch: 42, LR: 0.00001, Ratio: 0.40, Train Loss: -28.428, Val Loss: -0.676
+2021-12-18 23:02:33,412 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.61 0.62 0.61 0.67 0.7  0.75 0.81 1.  ]] ACC-AUC: 0.692
+2021-12-18 23:03:33,195 - pg_train.py[line:147] - INFO: Epoch: 43, LR: 0.00001, Ratio: 0.40, Train Loss: -29.108, Val Loss: -0.675
+2021-12-18 23:03:33,198 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.62 0.62 0.67 0.7  0.74 0.81 1.  ]] ACC-AUC: 0.692
+2021-12-18 23:04:33,040 - pg_train.py[line:147] - INFO: Epoch: 44, LR: 0.00001, Ratio: 0.40, Train Loss: -29.788, Val Loss: -0.674
+2021-12-18 23:04:33,044 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.62 0.61 0.67 0.7  0.74 0.81 1.  ]] ACC-AUC: 0.692
+2021-12-18 23:05:29,163 - pg_train.py[line:147] - INFO: Epoch: 45, LR: 0.00001, Ratio: 0.40, Train Loss: -30.467, Val Loss: -0.676
+2021-12-18 23:05:29,166 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.62 0.61 0.67 0.7  0.75 0.81 1.  ]] ACC-AUC: 0.693
+2021-12-18 23:06:28,883 - pg_train.py[line:147] - INFO: Epoch: 46, LR: 0.00001, Ratio: 0.40, Train Loss: -31.147, Val Loss: -0.674
+2021-12-18 23:06:28,885 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.62 0.61 0.66 0.7  0.74 0.81 1.  ]] ACC-AUC: 0.692
+2021-12-18 23:07:31,555 - pg_train.py[line:147] - INFO: Epoch: 47, LR: 0.00001, Ratio: 0.40, Train Loss: -31.827, Val Loss: -0.674
+2021-12-18 23:07:31,557 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.62 0.61 0.67 0.7  0.74 0.81 1.  ]] ACC-AUC: 0.692
+2021-12-18 23:08:32,729 - pg_train.py[line:147] - INFO: Epoch: 48, LR: 0.00001, Ratio: 0.40, Train Loss: -32.506, Val Loss: -0.675
+2021-12-18 23:08:32,732 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.62 0.61 0.66 0.7  0.75 0.81 1.  ]] ACC-AUC: 0.692
+2021-12-18 23:09:32,878 - pg_train.py[line:147] - INFO: Epoch: 49, LR: 0.00001, Ratio: 0.40, Train Loss: -33.186, Val Loss: -0.677
+2021-12-18 23:09:32,880 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.62 0.61 0.67 0.7  0.75 0.81 1.  ]] ACC-AUC: 0.692
+2021-12-18 23:10:37,102 - pg_train.py[line:147] - INFO: Epoch: 50, LR: 0.00001, Ratio: 0.40, Train Loss: -33.866, Val Loss: -0.675
+2021-12-18 23:10:37,106 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.62 0.6  0.67 0.7  0.75 0.81 1.  ]] ACC-AUC: 0.692
+2021-12-18 23:11:35,049 - pg_train.py[line:147] - INFO: Epoch: 51, LR: 0.00001, Ratio: 0.40, Train Loss: -34.546, Val Loss: -0.676
+2021-12-18 23:11:35,052 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.62 0.6  0.67 0.7  0.75 0.81 1.  ]] ACC-AUC: 0.692
+2021-12-18 23:12:33,023 - pg_train.py[line:147] - INFO: Epoch: 52, LR: 0.00001, Ratio: 0.40, Train Loss: -35.226, Val Loss: -0.676
+2021-12-18 23:12:33,025 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.62 0.6  0.67 0.7  0.75 0.81 1.  ]] ACC-AUC: 0.691
+2021-12-18 23:13:33,765 - pg_train.py[line:147] - INFO: Epoch: 53, LR: 0.00001, Ratio: 0.40, Train Loss: -35.907, Val Loss: -0.675
+2021-12-18 23:13:33,767 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.62 0.61 0.67 0.7  0.74 0.81 1.  ]] ACC-AUC: 0.691
+2021-12-18 23:14:32,923 - pg_train.py[line:147] - INFO: Epoch: 54, LR: 0.00001, Ratio: 0.40, Train Loss: -36.586, Val Loss: -0.676
+2021-12-18 23:14:32,926 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.62 0.61 0.66 0.7  0.75 0.81 1.  ]] ACC-AUC: 0.691
+2021-12-18 23:15:33,365 - pg_train.py[line:147] - INFO: Epoch: 55, LR: 0.00001, Ratio: 0.40, Train Loss: -37.266, Val Loss: -0.676
+2021-12-18 23:15:33,368 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.62 0.6  0.66 0.69 0.74 0.81 1.  ]] ACC-AUC: 0.689
+2021-12-18 23:16:38,534 - pg_train.py[line:147] - INFO: Epoch: 56, LR: 0.00001, Ratio: 0.40, Train Loss: -37.946, Val Loss: -0.675
+2021-12-18 23:16:38,537 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.62 0.61 0.66 0.69 0.74 0.81 1.  ]] ACC-AUC: 0.690
+2021-12-18 23:17:39,327 - pg_train.py[line:147] - INFO: Epoch: 57, LR: 0.00001, Ratio: 0.40, Train Loss: -38.626, Val Loss: -0.675
+2021-12-18 23:17:39,330 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.61 0.6  0.66 0.7  0.74 0.81 1.  ]] ACC-AUC: 0.690
+2021-12-18 23:18:38,337 - pg_train.py[line:147] - INFO: Epoch: 58, LR: 0.00001, Ratio: 0.40, Train Loss: -39.306, Val Loss: -0.675
+2021-12-18 23:18:38,340 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.61 0.61 0.66 0.7  0.75 0.81 1.  ]] ACC-AUC: 0.690
+2021-12-18 23:19:36,970 - pg_train.py[line:147] - INFO: Epoch: 59, LR: 0.00001, Ratio: 0.40, Train Loss: -39.986, Val Loss: -0.676
+2021-12-18 23:19:36,972 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.61 0.62 0.61 0.67 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.690
+2021-12-18 23:20:35,952 - pg_train.py[line:147] - INFO: Epoch: 60, LR: 0.00001, Ratio: 0.40, Train Loss: -40.666, Val Loss: -0.675
+2021-12-18 23:20:35,955 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.61 0.61 0.66 0.7  0.74 0.81 1.  ]] ACC-AUC: 0.690
+2021-12-18 23:21:32,743 - pg_train.py[line:147] - INFO: Epoch: 61, LR: 0.00001, Ratio: 0.40, Train Loss: -41.346, Val Loss: -0.674
+2021-12-18 23:21:32,745 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.61 0.61 0.66 0.7  0.74 0.81 1.  ]] ACC-AUC: 0.690
+2021-12-18 23:22:35,705 - pg_train.py[line:147] - INFO: Epoch: 62, LR: 0.00001, Ratio: 0.40, Train Loss: -42.026, Val Loss: -0.675
+2021-12-18 23:22:35,709 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.61 0.61 0.66 0.7  0.75 0.81 1.  ]] ACC-AUC: 0.690
+2021-12-18 23:23:39,161 - pg_train.py[line:147] - INFO: Epoch: 63, LR: 0.00001, Ratio: 0.40, Train Loss: -42.706, Val Loss: -0.674
+2021-12-18 23:23:39,163 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.61 0.61 0.66 0.69 0.74 0.81 1.  ]] ACC-AUC: 0.689
+2021-12-18 23:24:38,748 - pg_train.py[line:147] - INFO: Epoch: 64, LR: 0.00001, Ratio: 0.40, Train Loss: -43.386, Val Loss: -0.676
+2021-12-18 23:24:38,750 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.61 0.61 0.66 0.69 0.74 0.81 1.  ]] ACC-AUC: 0.689
+2021-12-18 23:25:36,729 - pg_train.py[line:147] - INFO: Epoch: 65, LR: 0.00001, Ratio: 0.40, Train Loss: -44.066, Val Loss: -0.675
+2021-12-18 23:25:36,731 - pg_train.py[line:148] - INFO: ACC:[[0.57 0.58 0.61 0.61 0.6  0.66 0.69 0.74 0.81 1.  ]] ACC-AUC: 0.688
+2021-12-18 23:26:32,192 - pg_train.py[line:147] - INFO: Epoch: 66, LR: 0.00001, Ratio: 0.40, Train Loss: -44.746, Val Loss: -0.676
+2021-12-18 23:26:32,195 - pg_train.py[line:148] - INFO: ACC:[[0.57 0.58 0.61 0.61 0.6  0.66 0.69 0.74 0.82 1.  ]] ACC-AUC: 0.688
+2021-12-18 23:27:29,364 - pg_train.py[line:147] - INFO: Epoch: 67, LR: 0.00001, Ratio: 0.40, Train Loss: -45.427, Val Loss: -0.675
+2021-12-18 23:27:29,367 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.61 0.6  0.66 0.69 0.75 0.82 1.  ]] ACC-AUC: 0.690
+2021-12-18 23:28:27,875 - pg_train.py[line:147] - INFO: Epoch: 68, LR: 0.00001, Ratio: 0.40, Train Loss: -46.107, Val Loss: -0.676
+2021-12-18 23:28:27,878 - pg_train.py[line:148] - INFO: ACC:[[0.57 0.58 0.6  0.61 0.6  0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.688
+2021-12-18 23:29:31,991 - pg_train.py[line:147] - INFO: Epoch: 69, LR: 0.00001, Ratio: 0.40, Train Loss: -46.787, Val Loss: -0.676
+2021-12-18 23:29:31,994 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.6  0.61 0.6  0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.688
+2021-12-18 23:30:32,963 - pg_train.py[line:147] - INFO: Epoch: 70, LR: 0.00001, Ratio: 0.40, Train Loss: -47.467, Val Loss: -0.676
+2021-12-18 23:30:32,967 - pg_train.py[line:148] - INFO: ACC:[[0.57 0.58 0.6  0.61 0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.688
+2021-12-18 23:31:32,505 - pg_train.py[line:147] - INFO: Epoch: 71, LR: 0.00001, Ratio: 0.40, Train Loss: -48.147, Val Loss: -0.676
+2021-12-18 23:31:32,509 - pg_train.py[line:148] - INFO: ACC:[[0.57 0.57 0.6  0.61 0.6  0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.687
+2021-12-18 23:32:31,367 - pg_train.py[line:147] - INFO: Epoch: 72, LR: 0.00001, Ratio: 0.40, Train Loss: -48.827, Val Loss: -0.675
+2021-12-18 23:32:31,370 - pg_train.py[line:148] - INFO: ACC:[[0.57 0.57 0.6  0.61 0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.688
+2021-12-18 23:33:30,811 - pg_train.py[line:147] - INFO: Epoch: 73, LR: 0.00001, Ratio: 0.40, Train Loss: -49.507, Val Loss: -0.677
+2021-12-18 23:33:30,814 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.6  0.61 0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.688
+2021-12-18 23:34:30,459 - pg_train.py[line:147] - INFO: Epoch: 74, LR: 0.00001, Ratio: 0.40, Train Loss: -50.187, Val Loss: -0.675
+2021-12-18 23:34:30,462 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.61 0.61 0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.689
+2021-12-18 23:35:30,423 - pg_train.py[line:147] - INFO: Epoch: 75, LR: 0.00001, Ratio: 0.40, Train Loss: -50.867, Val Loss: -0.675
+2021-12-18 23:35:30,426 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.6  0.61 0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.688
+2021-12-18 23:36:32,442 - pg_train.py[line:147] - INFO: Epoch: 76, LR: 0.00001, Ratio: 0.40, Train Loss: -51.547, Val Loss: -0.675
+2021-12-18 23:36:32,445 - pg_train.py[line:148] - INFO: ACC:[[0.57 0.58 0.61 0.61 0.6  0.65 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.688
+2021-12-18 23:37:34,416 - pg_train.py[line:147] - INFO: Epoch: 77, LR: 0.00001, Ratio: 0.40, Train Loss: -52.227, Val Loss: -0.676
+2021-12-18 23:37:34,419 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.6  0.61 0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.690
+2021-12-18 23:38:34,721 - pg_train.py[line:147] - INFO: Epoch: 78, LR: 0.00001, Ratio: 0.40, Train Loss: -52.907, Val Loss: -0.674
+2021-12-18 23:38:34,724 - pg_train.py[line:148] - INFO: ACC:[[0.57 0.58 0.6  0.61 0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.690
+2021-12-18 23:39:35,232 - pg_train.py[line:147] - INFO: Epoch: 79, LR: 0.00001, Ratio: 0.40, Train Loss: -53.587, Val Loss: -0.674
+2021-12-18 23:39:35,235 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.6  0.61 0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.690
+2021-12-18 23:40:33,776 - pg_train.py[line:147] - INFO: Epoch: 80, LR: 0.00001, Ratio: 0.40, Train Loss: -54.267, Val Loss: -0.675
+2021-12-18 23:40:33,779 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.6  0.61 0.61 0.66 0.69 0.74 0.82 1.  ]] ACC-AUC: 0.689
+2021-12-18 23:41:32,562 - pg_train.py[line:147] - INFO: Epoch: 81, LR: 0.00001, Ratio: 0.40, Train Loss: -54.948, Val Loss: -0.675
+2021-12-18 23:41:32,566 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.6  0.61 0.61 0.66 0.69 0.74 0.81 1.  ]] ACC-AUC: 0.688
+2021-12-18 23:42:32,427 - pg_train.py[line:147] - INFO: Epoch: 82, LR: 0.00001, Ratio: 0.40, Train Loss: -55.628, Val Loss: -0.675
+2021-12-18 23:42:32,430 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.6  0.61 0.61 0.65 0.69 0.75 0.82 1.  ]] ACC-AUC: 0.689
+2021-12-18 23:43:34,708 - pg_train.py[line:147] - INFO: Epoch: 83, LR: 0.00001, Ratio: 0.40, Train Loss: -56.308, Val Loss: -0.677
+2021-12-18 23:43:34,712 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.6  0.61 0.61 0.65 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.688
+2021-12-18 23:44:37,028 - pg_train.py[line:147] - INFO: Epoch: 84, LR: 0.00001, Ratio: 0.40, Train Loss: -56.988, Val Loss: -0.675
+2021-12-18 23:44:37,031 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.6  0.61 0.61 0.65 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.689
+2021-12-18 23:45:38,099 - pg_train.py[line:147] - INFO: Epoch: 85, LR: 0.00001, Ratio: 0.40, Train Loss: -57.668, Val Loss: -0.674
+2021-12-18 23:45:38,102 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.6  0.61 0.61 0.65 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.689
+2021-12-18 23:46:36,891 - pg_train.py[line:147] - INFO: Epoch: 86, LR: 0.00001, Ratio: 0.40, Train Loss: -58.349, Val Loss: -0.675
+2021-12-18 23:46:36,894 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.61 0.61 0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.689
+2021-12-18 23:47:35,346 - pg_train.py[line:147] - INFO: Epoch: 87, LR: 0.00001, Ratio: 0.40, Train Loss: -59.029, Val Loss: -0.675
+2021-12-18 23:47:35,349 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.61 0.61 0.62 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.691
+2021-12-18 23:48:35,840 - pg_train.py[line:147] - INFO: Epoch: 88, LR: 0.00001, Ratio: 0.40, Train Loss: -59.709, Val Loss: -0.675
+2021-12-18 23:48:35,843 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.61 0.61 0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.689
+2021-12-18 23:49:36,094 - pg_train.py[line:147] - INFO: Epoch: 89, LR: 0.00001, Ratio: 0.40, Train Loss: -60.389, Val Loss: -0.675
+2021-12-18 23:49:36,097 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.61 0.61 0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.689
+2021-12-18 23:50:38,757 - pg_train.py[line:147] - INFO: Epoch: 90, LR: 0.00001, Ratio: 0.40, Train Loss: -61.069, Val Loss: -0.676
+2021-12-18 23:50:38,760 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.61 0.61 0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.689
+2021-12-18 23:51:39,746 - pg_train.py[line:147] - INFO: Epoch: 91, LR: 0.00001, Ratio: 0.40, Train Loss: -61.749, Val Loss: -0.676
+2021-12-18 23:51:39,749 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.61 0.61 0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.689
+2021-12-18 23:52:40,639 - pg_train.py[line:147] - INFO: Epoch: 92, LR: 0.00001, Ratio: 0.40, Train Loss: -62.430, Val Loss: -0.675
+2021-12-18 23:52:40,642 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.58 0.6  0.61 0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.689
+2021-12-18 23:53:38,918 - pg_train.py[line:147] - INFO: Epoch: 93, LR: 0.00001, Ratio: 0.40, Train Loss: -63.110, Val Loss: -0.676
+2021-12-18 23:53:38,921 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.61 0.61 0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.689
+2021-12-18 23:54:36,337 - pg_train.py[line:147] - INFO: Epoch: 94, LR: 0.00001, Ratio: 0.40, Train Loss: -63.791, Val Loss: -0.675
+2021-12-18 23:54:36,339 - pg_train.py[line:148] - INFO: ACC:[[0.59 0.57 0.6  0.61 0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.688
+2021-12-18 23:55:35,250 - pg_train.py[line:147] - INFO: Epoch: 95, LR: 0.00001, Ratio: 0.40, Train Loss: -64.471, Val Loss: -0.675
+2021-12-18 23:55:35,253 - pg_train.py[line:148] - INFO: ACC:[[0.59 0.57 0.6  0.61 0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.688
+2021-12-18 23:56:35,221 - pg_train.py[line:147] - INFO: Epoch: 96, LR: 0.00001, Ratio: 0.40, Train Loss: -65.151, Val Loss: -0.677
+2021-12-18 23:56:35,223 - pg_train.py[line:148] - INFO: ACC:[[0.59 0.57 0.6  0.6  0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.688
+2021-12-18 23:57:36,428 - pg_train.py[line:147] - INFO: Epoch: 97, LR: 0.00001, Ratio: 0.40, Train Loss: -65.832, Val Loss: -0.675
+2021-12-18 23:57:36,431 - pg_train.py[line:148] - INFO: ACC:[[0.59 0.58 0.6  0.6  0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.689
+2021-12-18 23:58:37,665 - pg_train.py[line:147] - INFO: Epoch: 98, LR: 0.00001, Ratio: 0.40, Train Loss: -66.512, Val Loss: -0.676
+2021-12-18 23:58:37,667 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.6  0.6  0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.687
+2021-12-18 23:59:38,737 - pg_train.py[line:147] - INFO: Epoch: 99, LR: 0.00001, Ratio: 0.40, Train Loss: -67.192, Val Loss: -0.675
+2021-12-18 23:59:38,740 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.6  0.61 0.61 0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.688
+2021-12-19 00:00:37,907 - pg_train.py[line:147] - INFO: Epoch: 100, LR: 0.00001, Ratio: 0.40, Train Loss: -67.872, Val Loss: -0.675
+2021-12-19 00:00:37,910 - pg_train.py[line:148] - INFO: ACC:[[0.58 0.57 0.6  0.6  0.6  0.66 0.69 0.75 0.81 1.  ]] ACC-AUC: 0.687

@@ -24,6 +24,8 @@ def parse_args():
                         help='Input data path.')
     parser.add_argument('--model_path', nargs='?', default=osp.join(osp.dirname(__file__), '..', 'param', 'gnns'),
                         help='path for saving trained model.')
+    parser.add_argument('--cuda', type=int, default=0,
+                        help='GPU device.')
     parser.add_argument('--epoch', type=int, default=21,
                         help='Number of epoch.')
     parser.add_argument('--lr', type=float, default= 0.01,
@@ -43,7 +45,8 @@ def overload(func):
             # for inputs like model(graph=g)
             else:
                 g = kargs['data']
-            return func(args[0], g.to(device))
+            return func(args[0], g)
+
         elif len(args) +  len(kargs) == 6:
             # for inputs like model(x, ..., batch, pos)
             if len(args) == 6:
@@ -88,7 +91,6 @@ class MNISTNet(torch.nn.Module):
     
     @overload
     def get_graph_rep(self, data):
-        from torch.autograd import Variable
         x = F.elu(self.conv1(data.x, data.edge_index, data.edge_attr))
         x = F.elu(self.conv2(x, data.edge_index, data.edge_attr))
         x = F.elu(self.conv3(x, data.edge_index, data.edge_attr))
@@ -134,15 +136,14 @@ if __name__ == '__main__':
     
     set_seed(0)
     args = parse_args()
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = torch.device(f"cuda:{args.cuda}" if torch.cuda.is_available() else "cpu")
+
     transform = T.Cartesian(cat=False, max_value=9)
     train_dataset = MNISTSuperpixels(args.data_path, True, transform=transform)
     test_dataset = MNISTSuperpixels(args.data_path, False, transform=transform)
     train_loader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True)
     test_loader = DataLoader(test_dataset, batch_size=args.batch_size)
     d = train_dataset
-    
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = MNISTNet().to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=args.lr)
 

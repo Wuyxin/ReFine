@@ -1,9 +1,11 @@
 import torch
 import numpy as np
 
-from gnn import *
+import os
+from gnns import *
 from datasets import *
-
+if os.path.exists("visual_genome"):
+    from datasets.vg_dataset import Visual_Genome
 from torch_geometric.datasets import MNISTSuperpixels
 
 class MNISTTransform(object):
@@ -38,31 +40,31 @@ class MNISTTransform(object):
                                                   self.norm, self.max)
 
 
-def get_datasets(name):
+def get_datasets(name, root='data/'):
     if name == "mutag":
-        folder = 'data/MUTAG'
+        folder = os.path.join(root, 'MUTAG')
         train_dataset = Mutagenicity(folder, mode='training')
         test_dataset = Mutagenicity(folder, mode='testing')
         val_dataset = Mutagenicity(folder, mode='evaluation')
     elif name == "ba3":
-        folder = 'data/BA3'
+        folder = os.path.join(root, 'BA3')
         train_dataset = BA3Motif(folder, mode='training')
         test_dataset = BA3Motif(folder, mode='testing')
         val_dataset = BA3Motif(folder, mode='evaluation')
-    elif name == "vg":
-        folder = 'data/VG'
-        test_dataset = Visual_Genome(folder, mode='testing')
-        val_dataset = Visual_Genome(folder, mode='evaluation')
-        train_dataset = Visual_Genome(folder, mode='training')
     elif name == "mnist":
-        data_path = 'data/MNIST'
+        folder = os.path.join(root, 'MNIST')
         transform = MNISTTransform(cat=False, max_value=9)
-        train_dataset = MNISTSuperpixels(data_path, True, transform=transform)
-        test_dataset = MNISTSuperpixels(data_path, False, transform=transform)
+        train_dataset = MNISTSuperpixels(folder, True, transform=transform)
+        test_dataset = MNISTSuperpixels(folder, False, transform=transform)
         # Reduced dataset
         train_dataset = train_dataset[:6000]
         val_dataset = test_dataset[1000:2000]
         test_dataset = test_dataset[:1000]
+    elif name == "vg":
+        folder = os.path.join(root, 'VG')
+        test_dataset = Visual_Genome(folder, mode='testing')
+        val_dataset = Visual_Genome(folder, mode='evaluation')
+        train_dataset = Visual_Genome(folder, mode='training')
     else:
         raise ValueError
 

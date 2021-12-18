@@ -13,9 +13,8 @@ from torch.optim.lr_scheduler import ReduceLROnPlateau
 from torch_geometric.data import DataLoader
 from torch_geometric.nn import GINEConv, BatchNorm, global_mean_pool
 
-from overloader import overload
-
 sys.path.append('..')
+from gnns.overloader import overload
 from datasets.mutag_dataset import Mutagenicity
 from utils import set_seed, Gtrain, Gtest
 
@@ -27,6 +26,8 @@ def parse_args():
                         help='Input data path.')
     parser.add_argument('--model_path', nargs='?', default=osp.join(osp.dirname(__file__), '..', 'param', 'gnns'),
                         help='path for saving trained model.')
+    parser.add_argument('--cuda', type=int, default=0,
+                        help='GPU device.')
     parser.add_argument('--epoch', type=int, default=300, 
                         help='Number of epoch.')
     parser.add_argument('--lr', type=float, default= 1e-3,
@@ -105,7 +106,7 @@ if __name__ == '__main__':
 
     set_seed(0)
     args = parse_args()
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = torch.device(f"cuda:{args.cuda}" if torch.cuda.is_available() else "cpu")
 
     test_dataset = Mutagenicity(args.data_path, mode='testing')
     val_dataset = Mutagenicity(args.data_path, mode='evaluation')
@@ -147,20 +148,24 @@ if __name__ == '__main__':
         loss = Gtrain(train_loader,
                       model,
                       optimizer,
+                      device=device,
                       criterion=nn.CrossEntropyLoss()
                       )
 
         _, train_acc = Gtest(train_loader,
                              model,
+                             device=device,
                              criterion=nn.CrossEntropyLoss()
                              )
 
         val_error, val_acc = Gtest(val_loader,
                                    model,
+                                   device=device,
                                    criterion=nn.CrossEntropyLoss()
                                    )
         test_error, test_acc = Gtest(test_loader,
                                      model,
+                                     device=device,
                                      criterion=nn.CrossEntropyLoss()
                                      )
         scheduler.step(val_error)
@@ -172,6 +177,7 @@ if __name__ == '__main__':
         if epoch % args.verbose == 0:
             test_error, test_acc = Gtest(test_loader,
                                          model,
+                                         device=device,
                                          criterion=nn.CrossEntropyLoss()
                                          )
             t3 = time.time()

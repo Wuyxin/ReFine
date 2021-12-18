@@ -57,9 +57,10 @@ results["ReFine-FT"] = {"ROC-AUC": list(np.array(acc_logger).mean(axis=0)[0]),
 
 #---------------------------------------------------
 print("Evaluate ReFine w.r.t. ACC-AUC...")
-acc_logger, recall_logger, tuned = [], [], []
+recall_logger, tuned = [], []
 results["ReFine"] = {}
 for i, r in enumerate(ratios):
+    acc_logger = []
     for g in tqdm(iter(test_loader), total=len(test_loader)):
         g.to(device)
         refine.explain_graph(g, fine_tune=True, ratio=r, lr=1e-4, epoch=20)

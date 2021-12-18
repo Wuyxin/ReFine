@@ -14,8 +14,8 @@ This is the official code for **Towards Multi-Grained Explainability for Graph N
 |GNNExplainer|GNNExplainer: Generating Explanations for Graph Neural Networks|
 |PGExapliner|Parameterized Explainer for Graph Neural Network|
 |PGM-Exapliner|PGM-Explainer: Probabilistic Graphical Model Explanations for Graph Neural Networks|
-|Screener|Interpreting Graph Neural Networks via Causal Screening|
-|CXPlain|Cxplain: Causal explanations for model interpretation under uncertainty|
+|Screener|Causal Screening to Interpret Graph Neural Networks|
+|CXPlain|Cxplain: Causal Explanations for Model Interpretation under Uncertainty|
 
 ## Installation
 **Requirements**

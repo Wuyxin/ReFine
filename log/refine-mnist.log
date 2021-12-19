@@ -1,3 +1,27 @@
 2021-12-19 12:11:41,117 - refine_train.py[line:95] - INFO: number of graphs(train): 5986
 2021-12-19 12:11:41,119 - refine_train.py[line:95] - INFO: number of graphs(val):  973
 2021-12-19 12:11:41,120 - refine_train.py[line:95] - INFO: number of graphs(test):  979
+2021-12-19 12:13:51,619 - refine_train.py[line:158] - INFO: Epoch: 1, LR: 0.00100, Ratio: 0.20, Train Loss: -1.094, Val Loss: -1.139
+2021-12-19 12:13:51,722 - refine_train.py[line:163] - INFO: ACC:[[0.21 0.27 0.3  0.36 0.43 0.53 0.65 0.82 0.93 1.  ]] ACC-AUC: 0.551 Mean P: 0.672
+2021-12-19 12:15:57,635 - refine_train.py[line:158] - INFO: Epoch: 2, LR: 0.00100, Ratio: 0.20, Train Loss: -2.199, Val Loss: -1.146
+2021-12-19 12:18:03,636 - refine_train.py[line:158] - INFO: Epoch: 3, LR: 0.00100, Ratio: 0.20, Train Loss: -3.301, Val Loss: -1.149
+2021-12-19 12:18:03,743 - refine_train.py[line:163] - INFO: ACC:[[0.23 0.29 0.34 0.41 0.45 0.55 0.64 0.81 0.93 1.  ]] ACC-AUC: 0.565 Mean P: 0.692
+2021-12-19 12:20:08,473 - refine_train.py[line:158] - INFO: Epoch: 4, LR: 0.00100, Ratio: 0.20, Train Loss: -4.404, Val Loss: -1.144
+2021-12-19 12:22:13,265 - refine_train.py[line:158] - INFO: Epoch: 5, LR: 0.00100, Ratio: 0.20, Train Loss: -5.509, Val Loss: -1.140
+2021-12-19 12:22:13,372 - refine_train.py[line:163] - INFO: ACC:[[0.21 0.29 0.36 0.4  0.45 0.53 0.63 0.8  0.94 1.  ]] ACC-AUC: 0.562 Mean P: 0.699
+2021-12-19 12:24:16,205 - refine_train.py[line:158] - INFO: Epoch: 6, LR: 0.00100, Ratio: 0.20, Train Loss: -6.613, Val Loss: -1.140
+2021-12-19 12:26:28,788 - refine_train.py[line:158] - INFO: Epoch: 7, LR: 0.00020, Ratio: 0.20, Train Loss: -7.718, Val Loss: -1.136
+2021-12-19 12:26:28,901 - refine_train.py[line:163] - INFO: ACC:[[0.2  0.31 0.34 0.41 0.42 0.54 0.65 0.79 0.94 1.  ]] ACC-AUC: 0.561 Mean P: 0.702
+2021-12-19 12:28:33,080 - refine_train.py[line:158] - INFO: Epoch: 8, LR: 0.00020, Ratio: 0.20, Train Loss: -8.822, Val Loss: -1.136
+2021-12-19 12:30:36,346 - refine_train.py[line:158] - INFO: Epoch: 9, LR: 0.00020, Ratio: 0.20, Train Loss: -9.926, Val Loss: -1.137
+2021-12-19 12:30:36,459 - refine_train.py[line:163] - INFO: ACC:[[0.21 0.3  0.34 0.41 0.43 0.55 0.65 0.8  0.94 1.  ]] ACC-AUC: 0.562 Mean P: 0.702
+2021-12-19 12:32:40,716 - refine_train.py[line:158] - INFO: Epoch: 10, LR: 0.00020, Ratio: 0.20, Train Loss: -11.030, Val Loss: -1.141
+2021-12-19 12:34:45,981 - refine_train.py[line:158] - INFO: Epoch: 11, LR: 0.00004, Ratio: 0.20, Train Loss: -12.133, Val Loss: -1.137
+2021-12-19 12:34:46,103 - refine_train.py[line:163] - INFO: ACC:[[0.22 0.3  0.34 0.42 0.43 0.54 0.65 0.8  0.94 1.  ]] ACC-AUC: 0.565 Mean P: 0.703
+2021-12-19 12:36:55,871 - refine_train.py[line:158] - INFO: Epoch: 12, LR: 0.00004, Ratio: 0.20, Train Loss: -13.237, Val Loss: -1.138
+2021-12-19 12:39:02,253 - refine_train.py[line:158] - INFO: Epoch: 13, LR: 0.00004, Ratio: 0.20, Train Loss: -14.341, Val Loss: -1.138
+2021-12-19 12:39:02,376 - refine_train.py[line:163] - INFO: ACC:[[0.22 0.3  0.35 0.42 0.43 0.54 0.65 0.8  0.94 1.  ]] ACC-AUC: 0.564 Mean P: 0.703
+2021-12-19 12:41:14,761 - refine_train.py[line:158] - INFO: Epoch: 14, LR: 0.00004, Ratio: 0.20, Train Loss: -15.445, Val Loss: -1.138
+2021-12-19 12:43:29,906 - refine_train.py[line:158] - INFO: Epoch: 15, LR: 0.00001, Ratio: 0.20, Train Loss: -16.549, Val Loss: -1.138
+2021-12-19 12:43:30,685 - refine_train.py[line:163] - INFO: ACC:[[0.22 0.3  0.35 0.43 0.43 0.55 0.65 0.8  0.94 1.  ]] ACC-AUC: 0.565 Mean P: 0.703
+2021-12-19 12:45:41,297 - refine_train.py[line:158] - INFO: Epoch: 16, LR: 0.00001, Ratio: 0.20, Train Loss: -17.653, Val Loss: -1.138

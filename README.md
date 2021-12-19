@@ -60,14 +60,16 @@ Please also cite Visual Genome ([bibtex](https://dblp.uni-trier.de/rec/journals/
 ## Train GNNs
 We provide the trained GNNs in `param/gnns` for reproducing the results in our paper. To retrain the GNNs, run
 ```
-bash gnns/run.sh
+cd gnns/
+bash run.sh
 ```
 The trained GNNs will be saved in `param/gnns`.
 
 ## Explaining the Predictions
 1. For global training of PGExplainer and ReFine, run
 ```
-bash gnns/run.sh
+cd train/
+bash run.sh
 ```
 2. Load datasets
   ```python
@@ -101,7 +103,7 @@ For baseline explainers, e.g.,
 
 ```python
 gnn_explainer = GNNExplainer(device, gnn_path)
-gnnexplainer.explain_graph(test_dataset[0],
+gnn_explainer.explain_graph(test_dataset[0],
                            epochs=100, lr=1e-2)
                            
 screener = Screener(device, gnn_path)

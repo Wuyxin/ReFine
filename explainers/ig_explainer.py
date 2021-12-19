@@ -7,7 +7,7 @@ from explainers.base import Explainer
 class IGExplainer(Explainer):
 
     def __init__(self, device, gnn_model_path):
-        super(IGExplainer, self).__init__(gnn_model_path)
+        super(IGExplainer, self).__init__(device, gnn_model_path)
 
     def explain_graph(self, graph,
                         model=None,

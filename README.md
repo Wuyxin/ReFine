@@ -50,7 +50,7 @@ pip install torch-geometric==1.7.0
 1. The processed raw data for `BA-3motif` is available in the` data/` folder.
 2. Datasets `MNIST`, `Mutagenicity` will be automatically downloaded when training models.
 3. We select and label 4443 graphs from https://visualgenome.org/ to construct the **VG-5** dataset. The graphs are labeled with five classes: stadium, street, farm, surfing, forest. Each graph contains regions of the objects as the nodes, while edges indicate the relationships between object nodes. 
-Download the dataset from [Google Drive](https://drive.google.com/file/d/1ONg9hFCynE3KynxakgFhqZxg0fWRXgv6/view?usp=shari). Arrange the dir as 
+Download the dataset from [Google Drive](https://drive.google.com/file/d/1zFHyLTZm0N0Ckylx5aqfG-jRdlywBPXP/view?usp=sharing). Arrange the dir as 
 ```
 data ---BA3
  |------VG
@@ -91,7 +91,7 @@ gnn_path = 'param/gnns/ba3_net.pt'
 refine = torch.load(f'param/refine/{dataset}.pt') # load pretrained
 refine.remap_device(device)
 ```
-4. Explain & Evaluation
+4. Explain
 ```python
 ratios = [0.1 *i for i in range(1,11)]
 refine.explain_graph(test_dataset[0], fine_tune=True, 
@@ -107,7 +107,7 @@ gnnexplainer.explain_graph(test_dataset[0],
 screener = Screener(device, gnn_path)
 screener.explain_graph(test_dataset[0])                 
 ```     
-4. Evaluation & Visualization
+5. Evaluation & Visualization
 Evaluation and visualization are made universal for every `explainer`. After explaining a single graph, the pair `(graph, edge_imp:np.ndarray)` is saved as `explainer.last_result` by default, which is then evaluated or visualized.
 ```python
 acc_auc = refine.evaluate_acc(ratios).mean(),

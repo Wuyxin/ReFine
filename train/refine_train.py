@@ -41,7 +41,7 @@ def parse_args():
     parser.add_argument('--tau', type=float, default=0.1, help='Temperature.')
     parser.add_argument('--lr', type=float, default=1e-3, help='Learning Rate.')
     parser.add_argument('--batch_size', type=int, default=256, help='Batch size.')
-    parser.add_argument('--random_seed', type=int, default=2021)
+    parser.add_argument('--random_seed', type=int, default=0)
 
     return parser.parse_args()
 
@@ -165,4 +165,4 @@ for epoch in range(args.epoch):
 
 model_dir = osp.join(param_root, "refine/")
 os.makedirs(model_dir, exist_ok=True)
-torch.save(explainer, osp.join(model_dir, f'{args.dataset}.pt'))
+torch.save(explainer, osp.join(model_dir, f'refine-{args.dataset}.pt'))

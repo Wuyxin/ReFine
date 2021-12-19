@@ -10,10 +10,10 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-class CXplainer(Explainer):
+class CXPlain(Explainer):
     
     def __init__(self, device, gnn_model_path):
-        super(CXplainer, self).__init__(device, gnn_model_path)
+        super(CXPlain, self).__init__(device, gnn_model_path)
         
     def explain_graph(self, graph,
                       model=None,

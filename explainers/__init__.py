@@ -1,5 +1,5 @@
 from .random_caster import RandomCaster
-from .cxplainer import CXplainer
+from .cxplainer import CXPlain
 from .sa_explainer import SAExplainer
 from .ig_explainer import IGExplainer
 from .deeplift import DeepLIFTExplainer

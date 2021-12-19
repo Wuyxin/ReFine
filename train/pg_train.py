@@ -35,7 +35,7 @@ def parse_args():
     parser.add_argument('--hid', type=int, default=50, help='Hidden dim')
     parser.add_argument('--lr', type=float, default=1e-3, help='Learning Rate.')
     parser.add_argument('--batch_size', type=int, default=256, help='Batch size.')
-    parser.add_argument('--random_seed', type=int, default=2021)
+    parser.add_argument('--random_seed', type=int, default=0)
                         
     return parser.parse_args()
 

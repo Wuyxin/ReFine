@@ -91,7 +91,7 @@ from explainers import *
 device = torch.device("cuda")
 gnn_path = f'param/gnns/{name}_net.pt'
 
-refine = torch.load(f'param/refine/{dataset}.pt') # load pretrained
+refine = torch.load(f'param/refine/{name}.pt') # load pretrained
 refine.remap_device(device)
 ```
 4. Explain

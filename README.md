@@ -110,6 +110,7 @@ screener = Screener(device, gnn_path)
 screener.explain_graph(test_dataset[0])                 
 ```     
 5. Evaluation & Visualization
+
 Evaluation and visualization are made universal for every `explainer`. After explaining a single graph, the pair `(graph, edge_imp:np.ndarray)` is saved as `explainer.last_result` by default, which is then evaluated or visualized.
 ```python
 ratios = [0.1 *i for i in range(1,11)]

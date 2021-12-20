@@ -82,8 +82,7 @@ bash run.sh
   # filter out test data with wrong predictions,
   # the filtered indices are generated from train/refine_train.py
   mask = torch.load(f'param/filtered/{name}_idx_test.pt') 
-  test_loader = DataLoader(test_dataset[mask], 
-                            batch_size=1, shuffle=False)
+  test_dataset = test_dataset[mask]
   ```
 3. Instantiate the explainer
 ```python

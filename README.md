@@ -2,7 +2,7 @@
 
 ![](images/Framework.png)
 
-This is the official code for **Towards Multi-Grained Explainability for Graph Neural Networks (NeurIPS 2021)**. Besides, we provide **highly modularized** explainers for Graph Classification Tasks. Some of them are adapted from the image domain. Below is a summary:
+This is the official code for [**Towards Multi-Grained Explainability for Graph Neural Networks (NeurIPS 2021)**](https://papers.nips.cc/paper/2021/hash/99bcfcd754a98ce89cb86f73acc04645-Abstract.html). Besides, we provide **highly modularized** explainers for Graph Classification Tasks. Some of them are adapted from the image domain. Below is a summary:
 
 |Explainer|Paper|
 |:---|:---|
@@ -40,7 +40,7 @@ pip install torch-geometric==1.7.0
 
 3. Other packages
   ```
-  pip install tqdm logging pathlib argparse json pgmpy==0.1.11 
+  pip install tqdm logging pathlib matplotlib argparse json pgmpy==0.1.11 
   # For visualization (optional) 
   conda install -c conda-forge rdkit
   ```
@@ -78,8 +78,10 @@ bash run.sh
   from torch_geometric.data import DataLoader
   name = 'ba3'
   train_dataset, val_dataset, test_dataset = get_datasets(name=name)
-  # filter out test data with wrong predictions
-  mask = torch.load(f'param/filtered/{name}_idx_test.pt')
+
+  # filter out test data with wrong predictions,
+  # the filtered indices are generated from train/refine_train.py
+  mask = torch.load(f'param/filtered/{name}_idx_test.pt') 
   test_loader = DataLoader(test_dataset[mask], 
                             batch_size=1, shuffle=False)
   ```
@@ -88,14 +90,13 @@ bash run.sh
 from explainers import *
 
 device = torch.device("cuda")
-gnn_path = 'param/gnns/ba3_net.pt'
+gnn_path = f'param/gnns/{name}_net.pt'
 
 refine = torch.load(f'param/refine/{dataset}.pt') # load pretrained
 refine.remap_device(device)
 ```
 4. Explain
 ```python
-ratios = [0.1 *i for i in range(1,11)]
 refine.explain_graph(test_dataset[0], fine_tune=True, 
                      ratio=0.4, lr=1e-4, epoch=20)
 ```
@@ -112,9 +113,10 @@ screener.explain_graph(test_dataset[0])
 5. Evaluation & Visualization
 Evaluation and visualization are made universal for every `explainer`. After explaining a single graph, the pair `(graph, edge_imp:np.ndarray)` is saved as `explainer.last_result` by default, which is then evaluated or visualized.
 ```python
+ratios = [0.1 *i for i in range(1,11)]
 acc_auc = refine.evaluate_acc(ratios).mean(),
 racall =  refine.evaluate_recall(topk=5))
-refine.visualize(vis_ratio=0.3) # visualize explanation
+refine.visualize(vis_ratio=0.3) # visualize the explanation
 ```
 ## Citation
 Please cite our paper if you find the repository useful.

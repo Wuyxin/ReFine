@@ -165,4 +165,4 @@ for epoch in range(args.epoch):
 
 model_dir = osp.join(param_root, "refine/")
 os.makedirs(model_dir, exist_ok=True)
-torch.save(explainer, osp.join(model_dir, f'refine-{args.dataset}.pt'))
+torch.save(explainer, osp.join(model_dir, f'{args.dataset}.pt'))

@@ -19,10 +19,14 @@ def parse_args():
     parser = argparse.ArgumentParser(description="Pretrain ReFine")
     parser.add_argument('--cuda', type=int, default=0,
                         help='GPU device.')
-    parser.add_argument('--result_dir', type=str, default="results/",
-                        help='Result directory.')
     parser.add_argument('--dataset', type=str, default='ba3',
                         choices=['mutag', 'ba3', 'graphsst2', 'mnist', 'vg', 'reddit5k'])
+    parser.add_argument('--result_dir', type=str, default="results/",
+                        help='Result directory.')
+    parser.add_argument('--lr', type=float, default=2*1e-4,
+                        help='Fine-tuning learning rate.')
+    parser.add_argument('--epoch', type=int, default=20,
+                        help='Fine-tuning rpoch.')
     return parser.parse_args()
     
 
@@ -63,7 +67,7 @@ for i, r in enumerate(ratios):
     acc_logger = []
     for g in tqdm(iter(test_loader), total=len(test_loader)):
         g.to(device)
-        refine.explain_graph(g, fine_tune=True, ratio=r, lr=1e-4, epoch=20)
+        refine.explain_graph(g, fine_tune=True, ratio=r, lr=args.lr, epoch=args.epoch)
         acc_logger.append(refine.evaluate_acc(ratios)[0])
     results["ReFine"]["R-%.2f" % r] = {"ROC-AUC": list(np.array(acc_logger).mean(axis=0)[0]),
                                     "ACC-AUC": np.array(acc_logger).mean(axis=0).mean(),}

@@ -7,10 +7,10 @@ This is the official code for [**Towards Multi-Grained Explainability for Graph 
 |Explainer|Paper|
 |:---|:---|
 |ReFine|Towards Multi-Grained Explainability for Graph Neural Networks|
-|SA|Explainability techniques for graph convolutional networks.|
+|SA|Explainability Techniques for Graph Convolutional Networks.|
 |Grad-CAM|Explainability Methods for Graph Convolutional Neural Networks.|
 |DeepLIFT|Learning Important Features Through Propagating Activation Differences|
-|Integrated Gradients|Axiomatic attribution for deep networks|
+|Integrated Gradients|Axiomatic Attribution for Deep Networks|
 |GNNExplainer|GNNExplainer: Generating Explanations for Graph Neural Networks|
 |PGExapliner|Parameterized Explainer for Graph Neural Network|
 |PGM-Exapliner|PGM-Explainer: Probabilistic Graphical Model Explanations for Graph Neural Networks|
@@ -59,7 +59,7 @@ data ---BA3
 Please also cite Visual Genome ([bibtex](https://dblp.uni-trier.de/rec/journals/ijcv/KrishnaZGJHKCKL17.html?view=bibtex)) if you use this dataset.
 ## Train GNNs
 We provide the trained GNNs in `param/gnns` for reproducing the results in our paper. To retrain the GNNs, run
-```
+```bash
 cd gnns/
 bash run.sh
 ```
@@ -67,7 +67,7 @@ The trained GNNs will be saved in `param/gnns`.
 
 ## Explaining the Predictions
 1. For global training of PGExplainer and ReFine, run
-```
+```bash
 cd train/
 bash run.sh
 ```

@@ -195,7 +195,6 @@ if __name__ == '__main__':
         print('Epoch{:4d}[{:.3f}s]: LR: {:.5f}, Loss: {:.5f}, Train acc: {:.5f}, Validation Loss: {:.5f}, '
               'Validation acc: {:5f}'.format(epoch, t2 - t1, lr, loss, train_acc, val_error, val_acc))
 
-        torch.cuda.empty_cache()
     if args.random_label:
         save_path = 'vg_net_rd.pt'
     else:

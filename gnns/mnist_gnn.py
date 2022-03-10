@@ -132,6 +132,8 @@ def test():
         pred = model(data).max(1)[1]
         correct += pred.eq(data.y).sum().item()
     return correct / len(test_dataset)
+
+    
 if __name__ == '__main__':
     
     set_seed(0)

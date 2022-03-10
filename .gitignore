@@ -8,7 +8,9 @@ param/pg
 param/refine
 
 utils/__pycache__/
+train/__pycache__/
 gnns/__pycache__/
+explainers/__pycache__/
 datasets/__pycache__/
 visual_genome/
 

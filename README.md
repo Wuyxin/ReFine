@@ -73,16 +73,10 @@ bash run.sh
 ```
 2. Load datasets
   ```python
-  import torch
   from utils.dataset import get_datasets
-  from torch_geometric.data import DataLoader
+  
   name = 'ba3'
   train_dataset, val_dataset, test_dataset = get_datasets(name=name)
-
-  # filter out test data with wrong predictions,
-  # the filtered indices are generated from train/refine_train.py
-  mask = torch.load(f'param/filtered/{name}_idx_test.pt') 
-  test_dataset = test_dataset[mask]
   ```
 3. Instantiate the explainer
 ```python
@@ -114,8 +108,8 @@ screener.explain_graph(test_dataset[0])
 Evaluation and visualization are made universal for every `explainer`. After explaining a single graph, the pair `(graph, edge_imp:np.ndarray)` is saved as `explainer.last_result` by default, which is then evaluated or visualized.
 ```python
 ratios = [0.1 *i for i in range(1,11)]
-acc_auc = refine.evaluate_acc(ratios).mean(),
-racall =  refine.evaluate_recall(topk=5))
+acc_auc = refine.evaluate_acc(ratios).mean()
+racall =  refine.evaluate_recall(topk=5)
 refine.visualize(vis_ratio=0.3) # visualize the explanation
 ```
 
@@ -129,7 +123,7 @@ The results will be included in file `results/ba3_results.json`, where `ReFine-F
 ## Citation
 Please cite our paper if you find the repository useful.
 ```
-@inproceedings{2021refine,
+@inproceedings{wx2021refine,
   title={Towards Multi-Grained Explainability for Graph Neural Networks},
   author={Wang, Xiang and Wu, Ying-Xin and Zhang, An and He, Xiangnan and Chua, Tat-Seng},
   booktitle={Proceedings of the 35th Conference on Neural Information Processing Systems},

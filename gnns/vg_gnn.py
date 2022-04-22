@@ -59,7 +59,8 @@ class VGNet(torch.nn.Module):
                 ('relu3', nn.ReLU()),
                 ]))
 
-        self.conv3 = APPNP(K=2, alpha=0.8)
+        # set add_self_loops to False for torch > 1.5
+        self.conv3 = APPNP(K=2, alpha=0.8, add_self_loops=False)
         self.norm = BatchNorm(128)
         self.mlp = nn.Sequential(OrderedDict([
                 ('lin2', Lin(128, 64)),

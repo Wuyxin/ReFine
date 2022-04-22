@@ -364,12 +364,12 @@ class Explainer(object):
             top_edges = graph.edge_index[:, idx]
 
             scene_graph = vgl.get_scene_graph(image_id=int(graph.name),
-                                              images='../visual_genome/raw',
-                                              image_data_dir='../visual_genome/raw/by-id/',
-                                              synset_file='../visual_genome/raw/synsets.json')
+                                              images='visual_genome/raw',
+                                              image_data_dir='visual_genome/raw/by-id/',
+                                              synset_file='visual_genome/raw/synsets.json')
             # scene_graph = api.get_scene_graph_of_image(id=int(graph.id))
             r = 0.95  # transparency
-            img = Image.open("../data/VG/raw/%d-%d.jpg" % (graph.name, graph.y))
+            img = Image.open("data/VG/raw/%d-%d.jpg" % (graph.name, graph.y))
             data = list(img.getdata())
             ndata = list(
                 [(int((255 - p[0]) * r + p[0]), int((255 - p[1]) * r + p[1]), int((255 - p[2]) * r + p[2])) for p in
@@ -396,7 +396,8 @@ class Explainer(object):
             for i, (u, v) in enumerate(edges):
                 obj1 = scene_graph.objects[u]
                 obj2 = scene_graph.objects[v]
-                
+                ax.annotate("", xy=(obj2.x, obj2.y), xytext=(obj1.x, obj1.y),
+                            arrowprops=dict(width=topk - i, color='wheat', headwidth=5))
                 for obj in [obj1, obj2]:
                     ax.text(obj.x, obj.y - 8, str(obj), style='italic',
                             fontsize=13,

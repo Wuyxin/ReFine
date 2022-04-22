@@ -1,14 +1,8 @@
-import os
-import time
-import random
-import json
 import argparse
 
 import torch
 import numpy as np
-import os.path as osp
 from tqdm import tqdm
-from pathlib import Path
 from utils.dataset import get_datasets
 from explainers import *
 from gnns import *

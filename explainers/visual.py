@@ -98,6 +98,7 @@ class x_map_mutag(Enum):
     Ca=13
 
 def graph_to_mol(X, edge_index,edge_attr):
+    from rdkit import Chem
     mol = Chem.RWMol()
     X = [
         Chem.Atom(x_map_mutag(x.index(1)).name)

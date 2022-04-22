@@ -2,10 +2,13 @@ data/MNIST
 data/MUTAG
 data/VG
 data/BA3/processed
+data/BA3/processed_torch=1.5
 
 param/filtered
 param/pg
 param/refine
+param/gnns_torch=1.8
+param/refine_torch=1.8
 
 utils/__pycache__/
 train/__pycache__/

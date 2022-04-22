@@ -49,12 +49,15 @@ class BA3Motif(InMemoryDataset):
             x = alpha * x + (1 - alpha) * torch.rand((node_idx.size(0), 4))
             edge_attr = torch.ones(edge_index.size(1), 1)
             y = torch.tensor(y, dtype=torch.long).unsqueeze(dim=0)
+            # fix bug for torch > 1.6
+            p = np.array(list(p.values())) 
+            
             data = Data(x=x, y=y, z=z,
                         edge_index=edge_index,
                         edge_attr=edge_attr,
                         pos = p,
                         ground_truth_mask=ground_truth,
-                        name=f'TR-3motif{idx}', idx=idx)
+                        name=f'BA-3motif{idx}', idx=idx)
 
             if self.pre_filter is not None and not self.pre_filter(data):
                 continue

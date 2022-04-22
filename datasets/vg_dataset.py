@@ -1,5 +1,5 @@
 import os
-import copy
+from tqdm import tqdm
 import random
 import numpy as np
 from PIL import Image
@@ -43,8 +43,8 @@ class Visual_Genome(InMemoryDataset):
         images = {img.id: img for img in vgl.get_all_image_data('../visual_genome/raw')}
         data_list = []
         idx = 0
-        print("begin")
-        for img_name in self.raw_file_names:
+        print("It might take a while.")
+        for img_name in tqdm(self.raw_file_names):
             idx += 1
             img_id = int(img_name[:-6])
             y = int(img_name[-5])

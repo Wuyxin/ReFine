@@ -1,6 +1,6 @@
 # ReFine: Multi-Grained Explainability for GNNs
 
-![](images/Framework.png)
+![](framework.png)
 
 This is the official code for [**Towards Multi-Grained Explainability for Graph Neural Networks (NeurIPS 2021)**](https://papers.nips.cc/paper/2021/hash/99bcfcd754a98ce89cb86f73acc04645-Abstract.html). Besides, we provide **highly modularized** explainers for Graph Classification Tasks. Some of them are adapted from the image domain. Below is a summary:
 
@@ -74,9 +74,11 @@ bash run.sh
 2. Load datasets
   ```python
   from utils.dataset import get_datasets
+  from torch_geometric.data import DataLoader
   
   name = 'ba3'
   train_dataset, val_dataset, test_dataset = get_datasets(name=name)
+  test_loader = DataLoader(test_dataset, batch_size=1)
   ```
 3. Instantiate the explainer
 ```python
@@ -90,18 +92,19 @@ refine.remap_device(device)
 ```
 4. Explain
 ```python
-refine.explain_graph(test_dataset[0], fine_tune=True, 
-                     ratio=0.4, lr=1e-4, epoch=20)
+for g in test_loadder:
+  refine.explain_graph(g, fine_tune=True, 
+                      ratio=0.4, lr=1e-4, epoch=20)
 ```
 For baseline explainers, e.g.,
 
 ```python
 gnn_explainer = GNNExplainer(device, gnn_path)
-gnn_explainer.explain_graph(test_dataset[0],
+gnn_explainer.explain_graph(g,
                            epochs=100, lr=1e-2)
                            
 screener = Screener(device, gnn_path)
-screener.explain_graph(test_dataset[0])                 
+screener.explain_graph(g)                 
 ```     
 5. Evaluation & Visualization
 

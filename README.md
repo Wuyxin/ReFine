@@ -4,7 +4,6 @@
 
 This is the official code for [**Towards Multi-Grained Explainability for Graph Neural Networks (NeurIPS 2021)**](https://papers.nips.cc/paper/2021/hash/99bcfcd754a98ce89cb86f73acc04645-Abstract.html). Besides, we provide **highly modularized** explainers for Graph Classification Tasks. Some of them are adapted from the image domain. Below is a summary:
 
-
 |Explainer|Paper|
 |:---|:---|
 |ReFine|Towards Multi-Grained Explainability for Graph Neural Networks|

@@ -10,11 +10,7 @@ param/refine
 param/gnns_torch=1.8
 param/refine_torch=1.8
 
-utils/__pycache__/
-train/__pycache__/
-gnns/__pycache__/
-explainers/__pycache__/
-datasets/__pycache__/
+__pycache__
 visual_genome/
 
 nohup.out

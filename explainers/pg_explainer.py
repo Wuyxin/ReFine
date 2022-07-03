@@ -45,6 +45,12 @@ class PGExplainer(Explainer):
                 module.__explain__ = False
                 module.__edge_mask__ = None
 
+    def __setup_target_label__(self, graph):
+        
+        if not hasattr(graph, 'hat_y'):
+            graph.hat_y = self.model(graph).argmax(-1).to(graph.x.device)
+        return graph
+
     def __reparameterize__(self, log_alpha, beta=0.1, training=True):
 
         if training:
@@ -137,19 +143,21 @@ class PGExplainer(Explainer):
                       draw_graph=0, vis_ratio=0.2,
                       train_mode=False, supplement=False
                       ):
+        
+        if not model == None:
+            self.model = model
             
+        graph = self.__setup_target_label__(graph)
         ori_mask = self.get_mask(graph)
         edge_mask = self.__reparameterize__(ori_mask, training=train_mode, beta=temp)
         imp = edge_mask.detach().cpu().numpy()
 
         if train_mode:
-            if model == None:
-                model = self.model
             # ----------------------------------------------------
             # (1) batch version: get positive edge index(G_s) for ego graph
             self.__set_masks__(edge_mask, self.model)
             log_logits = self.model(graph)
-            loss = self.__loss__(log_logits, edge_mask, graph.y)
+            loss = self.__loss__(log_logits, edge_mask, graph.hat_y)
             
             self.__clear_masks__(self.model)
             return loss

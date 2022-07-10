@@ -33,7 +33,7 @@ class DeepLIFTExplainer(Explainer):
                     module.__class__.__name__ in ['Sigmoid', 'Tanh']:
                 module.register_backward_hook(hook_fn_backward)
 
-    def __reference__(self, graph):
+    def _reference(self, graph):
 
         # obtain input and output data
         def hook_fn_forward(module, input, output):
@@ -86,7 +86,7 @@ class DeepLIFTExplainer(Explainer):
         if model == None:
             model = self.model
 
-        self.__reference__(graph)
+        self._reference(graph)
         edge_attr = Variable(graph.edge_attr, requires_grad=True)
 
         # For DeepLIFTExplainer, self.model needs to

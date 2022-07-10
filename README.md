@@ -123,6 +123,7 @@ python evaluate.py --dataset ba3
 ```
 The results will be included in file `results/ba3_results.json`, where `ReFine-FT.ACC-AUC` (`ReFine-FT.Recall@5`) and `ReFine.ACC-AUC` (`ReFine.Recall@5`) are the performances of ReFine-FT and ReFine, respectively. 
 
+
 ## Citation
 Please cite our paper if you find the repository useful.
 ```

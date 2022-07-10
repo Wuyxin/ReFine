@@ -32,26 +32,26 @@ class PGExplainer(Explainer):
             hid=hid,
             n_layers=n_layers).to(self.device)
 
-    def __set_masks__(self, mask, model):
+    def _set_masks(self, mask, model):
 
         for module in model.modules():
             if isinstance(module, MessagePassing):
                 module.__explain__ = True
                 module.__edge_mask__ = mask
 
-    def __clear_masks__(self, model):
+    def _clear_masks(self, model):
         for module in model.modules():
             if isinstance(module, MessagePassing):
                 module.__explain__ = False
                 module.__edge_mask__ = None
 
-    def __setup_target_label__(self, graph):
+    def _setup_target_label(self, graph):
         
         if not hasattr(graph, 'hat_y'):
             graph.hat_y = self.model(graph).argmax(-1).to(graph.x.device)
         return graph
 
-    def __reparameterize__(self, log_alpha, beta=0.1, training=True):
+    def _reparameterize(self, log_alpha, beta=0.1, training=True):
 
         if training:
             random_noise = torch.rand(log_alpha.size()).to(self.device)
@@ -63,7 +63,7 @@ class PGExplainer(Explainer):
 
         return gate_inputs
 
-    def __loss__(self, log_logits, mask, pred_label):
+    def _loss(self, log_logits, mask, pred_label):
 
         # loss = criterion(log_logits, pred_label)
         idx = [i for i in range(len(pred_label))]
@@ -96,7 +96,7 @@ class PGExplainer(Explainer):
         exp_subgraph.edge_attr = graph.edge_attr[top_idx]
         exp_subgraph.edge_index = graph.edge_index[:, top_idx]
         exp_subgraph.x, exp_subgraph.edge_index, exp_subgraph.batch, _ = \
-            self.__relabel__(exp_subgraph, exp_subgraph.edge_index)
+            self._relabel(exp_subgraph, exp_subgraph.edge_index)
 
         return exp_subgraph, imp[top_idx]
 
@@ -147,19 +147,19 @@ class PGExplainer(Explainer):
         if not model == None:
             self.model = model
             
-        graph = self.__setup_target_label__(graph)
+        graph = self._setup_target_label(graph)
         ori_mask = self.get_mask(graph)
-        edge_mask = self.__reparameterize__(ori_mask, training=train_mode, beta=temp)
+        edge_mask = self._reparameterize(ori_mask, training=train_mode, beta=temp)
         imp = edge_mask.detach().cpu().numpy()
 
         if train_mode:
             # ----------------------------------------------------
             # (1) batch version: get positive edge index(G_s) for ego graph
-            self.__set_masks__(edge_mask, self.model)
+            self._set_masks(edge_mask, self.model)
             log_logits = self.model(graph)
-            loss = self.__loss__(log_logits, edge_mask, graph.hat_y)
+            loss = self._loss(log_logits, edge_mask, graph.hat_y)
             
-            self.__clear_masks__(self.model)
+            self._clear_masks(self.model)
             return loss
 
         if draw_graph:

@@ -46,7 +46,7 @@ class Explainer(object):
         imp += 1e-16
         return imp / imp.sum()
 
-    def __relabel__(self, g, edge_index):
+    def _relabel(self, g, edge_index):
 
         sub_nodes = torch.unique(edge_index)
         x = g.x[sub_nodes]
@@ -64,7 +64,7 @@ class Explainer(object):
         edge_index = node_idx[edge_index]
         return x, edge_index, batch, pos
 
-    def __reparameterize__(self, log_alpha, beta=0.1, training=True):
+    def _reparameterize(self, log_alpha, beta=0.1, training=True):
 
         if training:
             random_noise = torch.rand(log_alpha.size()).to(self.device)
@@ -101,7 +101,7 @@ class Explainer(object):
         # .... the nodes.
         # exp_subgraph.x = graph.x
         if relabel:
-            exp_subgraph.x, exp_subgraph.edge_index, exp_subgraph.batch, exp_subgraph.pos = self.__relabel__(exp_subgraph, exp_subgraph.edge_index)
+            exp_subgraph.x, exp_subgraph.edge_index, exp_subgraph.batch, exp_subgraph.pos = self._relabel(exp_subgraph, exp_subgraph.edge_index)
         
         return exp_subgraph
 

@@ -35,20 +35,20 @@ class ReFine(Explainer):
         ]).to(device)
         self.gamma = gamma
 
-    def __set_masks__(self, mask, model):
+    def _set_masks(self, mask, model):
     
         for module in model.modules():
             if isinstance(module, MessagePassing):
                 module.__explain__ = True
                 module.__edge_mask__ = mask
 
-    def __clear_masks__(self, model):
+    def _clear_masks(self, model):
         for module in model.modules():
             if isinstance(module, MessagePassing):
                 module.__explain__ = False
                 module.__edge_mask__ = None
 
-    def __reparameterize__(self, log_alpha, beta=1, training=True):
+    def _reparameterize(self, log_alpha, beta=1, training=True):
         
         if training:
             random_noise = torch.rand(log_alpha.size()).to(self.device)
@@ -60,7 +60,7 @@ class ReFine(Explainer):
             
         return gate_inputs
 
-    def __setup_target_label__(self, graph):
+    def _setup_target_label(self, graph):
         
         if not hasattr(graph, 'hat_y'):
             graph.hat_y = self.model(graph).argmax(-1).to(graph.x.device)
@@ -98,7 +98,7 @@ class ReFine(Explainer):
         exp_subgraph.edge_attr = graph.edge_attr[top_idx]
         exp_subgraph.edge_index = graph.edge_index[:, top_idx]
         exp_subgraph.x, exp_subgraph.edge_index, exp_subgraph.batch, _ = \
-            self.__relabel__(exp_subgraph, exp_subgraph.edge_index)
+            self._relabel(exp_subgraph, exp_subgraph.edge_index)
 
         return exp_subgraph, imp[top_idx]
 
@@ -158,10 +158,10 @@ class ReFine(Explainer):
         self, graph, ratio=1.0, fine_tune=False,
         lr=1e-4, epoch=50, draw_graph=0, vis_ratio=0.2):
         
-        graph = self.__setup_target_label__(graph)
+        graph = self._setup_target_label(graph)
         if not fine_tune:
             edge_mask = self.get_mask(graph)
-            edge_mask = self.__reparameterize__(edge_mask, training=False)
+            edge_mask = self._reparameterize(edge_mask, training=False)
             imp = edge_mask.detach().cpu().numpy()
             self.last_result = (graph, imp)
             
@@ -178,14 +178,14 @@ class ReFine(Explainer):
                 graph.edge_index,
                 graph.edge_attr
             ).view(-1)
-            edge_mask = self.__reparameterize__(edge_mask, training=False)
+            edge_mask = self._reparameterize(edge_mask, training=False)
 
             pos_idx, _, _, _ = self.get_pos_edge(graph, edge_mask, ratio)
             pos_edge_mask = edge_mask[pos_idx]
             pos_edge_index = graph.edge_index[:, pos_idx]
             pos_edge_attr = graph.edge_attr[pos_idx, :]
-            self.__set_masks__(pos_edge_mask, self.model)
-            G1_x, G1_pos_edge_index, G1_batch, G1_pos = self.__relabel__(graph, pos_edge_index)
+            self._set_masks(pos_edge_mask, self.model)
+            G1_x, G1_pos_edge_index, G1_batch, G1_pos = self._relabel(graph, pos_edge_index)
 
             log_logits = self.model(
                 x=G1_x,
@@ -194,7 +194,7 @@ class ReFine(Explainer):
                 batch=G1_batch,
                 pos=G1_pos
             )
-            self.__clear_masks__(self.model)
+            self._clear_masks(self.model)
             fid_loss = self.fidelity_loss(log_logits, edge_mask, graph.hat_y)
             fid_loss.backward()
             optimizer.step()
@@ -213,16 +213,16 @@ class ReFine(Explainer):
         if model == None:
             model = self.model
 
-        graph = self.__setup_target_label__(graph)
+        graph = self._setup_target_label(graph)
         ori_mask = self.get_mask(graph)
-        edge_mask = self.__reparameterize__(ori_mask, training=reperameter)
+        edge_mask = self._reparameterize(ori_mask, training=reperameter)
         
         # ----------------------------------------------------
         # (1) compute fidelity loss
-        self.__set_masks__(edge_mask, self.model)
+        self._set_masks(edge_mask, self.model)
         log_logits = self.model(graph)
         fid_loss = self.fidelity_loss(log_logits, edge_mask, graph.hat_y)
-        self.__clear_masks__(self.model)
+        self._clear_masks(self.model)
         
         # ----------------------------------------------------
         # (2) compute contrastive loss
@@ -230,8 +230,8 @@ class ReFine(Explainer):
         pos_edge_mask = edge_mask[pos_idx]
         pos_edge_index = graph.edge_index[:, pos_idx]
         pos_edge_attr = graph.edge_attr[pos_idx, :]
-        self.__set_masks__(pos_edge_mask, self.model)
-        G1_x, G1_pos_edge_index, G1_batch, G1_pos = self.__relabel__(graph, pos_edge_index)
+        self._set_masks(pos_edge_mask, self.model)
+        G1_x, G1_pos_edge_index, G1_batch, G1_pos = self._relabel(graph, pos_edge_index)
         graph_rep = self.model.get_graph_rep(
             x=G1_x,
             edge_index=G1_pos_edge_index,
@@ -240,7 +240,7 @@ class ReFine(Explainer):
             pos=G1_pos
         )
         cts_loss = self.get_contrastive_loss(graph_rep, graph.hat_y, graph.batch)
-        self.__clear_masks__(self.model)
+        self._clear_masks(self.model)
 
         loss =  fid_loss + self.gamma * cts_loss
         

@@ -127,7 +127,7 @@ The results will be included in file `results/ba3_results.json`, where `ReFine-F
 ## Citation
 Please cite our paper if you find the repository useful.
 ```
-@inproceedings{wx2021refine,
+@inproceedings{refine,
   title={Towards Multi-Grained Explainability for Graph Neural Networks},
   author={Wang, Xiang and Wu, Ying-Xin and Zhang, An and He, Xiangnan and Chua, Tat-Seng},
   booktitle={Proceedings of the 35th Conference on Neural Information Processing Systems},

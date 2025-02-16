@@ -10,7 +10,8 @@ from torch_geometric.data import InMemoryDataset, download_url, extract_zip, Dat
 
 class Mutagenicity(InMemoryDataset):
 
-    url = ('https://ls11-www.cs.tu-dortmund.de/people/morris/graphkerneldatasets/Mutagenicity.zip')
+    url = ('https://www.chrsmrrs.com/graphkerneldatasets/Mutagenicity.zip')
+    # ('https://ls11-www.cs.tu-dortmund.de/people/morris/graphkerneldatasets/Mutagenicity.zip')
 
     splits = ['training', 'evaluation', 'testing']
 
